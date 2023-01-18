@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class Main implements ActionListener{
+public class Calculator implements ActionListener{
   
   JFrame frame;
   JTextField textField;
@@ -14,12 +14,22 @@ public class Main implements ActionListener{
   JPanel panel;
 
   Font myFont = new Font("Ink Free", Font.BOLD, 30);
+  
   double num1 = 0, num2 = 0, result=0;
   char operator;
   
-  Calculator(){
+  Calculator() {
+    frame = new JFrame("Calculator");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(420, 550);
+    frame.setLayout(null);
+
+
+
     
+    frame.setVisible(true);
   }
+  
   public static void main(String[] args) {
     
     Calculator calc = new Calculator();
